@@ -1,0 +1,84 @@
+{
+  "name": "spacedmonkey/spacedmonkey-site",
+  "type": "project",
+  "license": "MIT",
+  "config": {
+    "preferred-install": "dist",
+     "vendor-dir":  "vendor",
+     "bin-dir":     "bin"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://wpackagist.org"
+    },
+    {
+       "type": "vcs",
+       "url":  "https://bitbucket.org/spacedmonkey/roots.git"
+    },
+    {
+       "type": "vcs",
+       "url":  "https://bitbucket.org/spacedmonkey/jdh.git"
+    },
+    {
+       "type": "vcs",
+       "url":  "https://bitbucket.org/spacedmonkey/spacedmonkey.git"
+    },
+    {
+       "type": "vcs",
+       "url":  "https://bitbucket.org/spacedmonkey/kandyweeding.git"
+    },
+    {
+       "type": "vcs",
+       "url":  "https://github.com/spacedmonkey/advanced-post-cache.git"
+    },
+    {
+       "type": "vcs",
+       "url":  "https://github.com/spacedmonkey/memcache-object-cache.git"
+    },
+    {
+       "type": "vcs",
+       "url":  "https://github.com/spacedmonkey/http-concat.git"
+    }
+    
+  ],
+  "require": {
+    "php": ">=5.4",
+    "johnpbloch/wordpress"                      : "@stable",
+    "composer/installers"                       : "1.x",
+    "automattic/advanced-post-cache"            : "dev-spacedmonkey-composer-2",
+    "spacedmonkey/http-concat"                  : "dev-master",
+    "spacedmonkey/spacedmonkey"                 : "dev-master",
+    "spacedmonkey/kandyweeding"                 : "dev-master",
+    "spacedmonkey/jdh"                          : "dev-master",
+    "humanmade/mercator"                        : "dev-master",
+    "humanmade/memcache-object-cache"           : "dev-master",
+    "spacedmonkey/disable-xml-rpc-fully"        : "@stable", 
+    "spacedmonkey/simple-google-news-sitemap"   : "@stable",
+    "spacedmonkey/super-simple-events"          : "@stable",
+    "yoast/wordpress-seo"                       : "@stable",
+    "wp-cli/wp-cli"                             : "@stable",
+    "wpackagist-plugin/advanced-custom-fields"  : "@stable",
+    "wpackagist-plugin/ajax-comment-loading"    : "@stable",
+    "wpackagist-plugin/batcache"                : "@stable",
+    "wpackagist-plugin/contact-form-7"          : "@stable",
+    "wpackagist-plugin/hyperdb"                 : "@stable",
+    "wpackagist-plugin/google-analytics-for-wordpress"       : "@stable",
+    "wpackagist-plugin/jetpack"                 : "@stable",
+    "wpackagist-plugin/really-simple-captcha"   : "@stable",
+    "wpackagist-plugin/wordpress-bootstrap-css" : "@stable"
+  },
+  "require-dev" : {
+        "wpackagist-plugin/query-monitor"             : "2.x",
+        "phpunit/phpunit"                             : "3.7.x@stable"
+  },
+  "extra": {
+    "installer-paths": {
+      "web/wp-content/dropins/{$name}/": ["wpackagist-plugin/hyperdb", "wpackagist-plugin/batcache","humanmade/mercator","humanmade/memcache-object-cache"],
+      "web/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "web"
+  }
+}
