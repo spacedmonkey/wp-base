@@ -66,7 +66,7 @@
     "wpackagist-plugin/google-analytics-for-wordpress"       : "@stable",
     "wpackagist-plugin/jetpack"                 : "@stable",
     "wpackagist-plugin/really-simple-captcha"   : "@stable",
-    "wpackagist-plugin/wordpress-bootstrap-css" : "@stable"
+    "wpackagist-plugin/wordpress-bootstrap-css" : "dev-master"
   },
   "require-dev" : {
         "wpackagist-plugin/query-monitor"             : "2.x",
