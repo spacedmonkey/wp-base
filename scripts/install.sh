@@ -1,7 +1,8 @@
-composer update 
-composer update
+composer update --prefer-source --no-dev --verbose
+composer update --prefer-source --no-dev --verbose
 mv web/wp-content/dropins/memcache-object-cache/object-cache.php web/wp-content/object-cache.php
 mv web/wp-content/dropins/hyperdb/db.php web/wp-content/db.php
-mv web/wp-content/plugins/batcache/advanced-cache.php web/wp-content/advanced-cache.php
-rm -rf web/wp-content/dropins
+mv web/wp-content/dropins/batcache/advanced-cache.php web/wp-content/advanced-cache.php
+mv web/wp-content/dropins/batcache/batcache.php web/wp-content/mu-plugins/batcache.php
 cp inc/dropins/*.php web/wp-content/
+cp inc/mu-plugins/*.php web/wp-content/mu-plugins/
