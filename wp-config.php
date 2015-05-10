@@ -14,18 +14,6 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'database_name_here');
-
-/** MySQL database username */
-define('DB_USER', 'username_here');
-
-/** MySQL database password */
-define('DB_PASSWORD', 'password_here');
-
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -33,33 +21,22 @@ define('DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
-/**#@+
- * Authentication Unique Keys and Salts.
- *
- * Change these to different unique phrases!
- * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
- * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
- *
- * @since 2.6.0
- */
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
+/** Add in local settings **/
+$local_config = __DIR__ . '/local-config.php';
+if ( file_exists( $local_config ) ) {
+	require_once $local_config;
+}
 
-/**#@-*/
+/** Added in composer autoloader **/
+require_once __DIR__ . '/vendor/autoload.php';
 
-/**
- * WordPress Database Table prefix.
- *
- * You can have multiple installations in one database if you give each a unique
- * prefix. Only numbers, letters, and underscores please!
- */
-$table_prefix  = 'wp_';
+/** Batcache config **/
+require_once __DIR__ . '/batcache-config.php';
+
+/** Location of the DB config file for HyperDB **/
+define( 'DB_CONFIG_FILE', __DIR__ . '/db-config.php' );
+
+
 
 /**
  * Disable updates
@@ -87,16 +64,31 @@ define('DISALLOW_FILE_MODS', true );
 define('WP_DEBUG', false);
 
 
-require_once __DIR__ . '/vendor/autoload.php';
 
-/** Location of the DB config file for HyperDB **/
-define( 'DB_CONFIG_FILE', __DIR__ . '/db-config.php' );
+$http_host = $_SERVER['HTTP_HOST'];
 
-require_once __DIR__ . '/batcache-config.php';
+define('COOKIE_DOMAIN', $http_host);
 
+if ( isset($_SERVER['HTTPS']) ) {
+        if ( 'on' == strtolower($_SERVER['HTTPS']) || '1' == $_SERVER['HTTPS'] ) {
+                $http_host = "https://{$http_host}";
+        } else {
+                $http_host = "http://{$http_host}";
+        }
+} else if ( isset($_SERVER['SERVER_PORT']) && ( '443' == $_SERVER['SERVER_PORT'] ) ) {
+        $http_host = "https://{$http_host}";
+} else {
+        $http_host = "http://{$http_host}";
+}
+define('WP_PLUGIN_DIR',   ABSPATH . 'wp-content/plugins' );
+define('WP_PLUGIN_URL',   "{$http_host}/wp-content/plugins" );
+define('WPMU_PLUGIN_DIR', ABSPATH . 'wp-content/mu-plugins' );
+define('WPMU_PLUGIN_URL', "{$http_host}/wp-content/mu-plugins" );
+define('WP_CONTENT_DIR',  ABSPATH . 'wp-content' );
+define('WP_CONTENT_URL',  "{$http_host}/wp-content" );
+define('WP_HOME', $http_host);
+define('WP_SITEURL', $http_host);
 
-/** Good morning! */
-define( 'SUNRISE', true );
 
 /* That's all, stop editing! Happy blogging. */
 
