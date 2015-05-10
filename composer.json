@@ -3,7 +3,8 @@
   "type": "project",
   "license": "MIT",
   "config": {
-    "preferred-install": "dist",
+     "preferred-install": "dist",
+     "prefer-stable": true,
      "vendor-dir":  "vendor",
      "bin-dir":     "bin"
   },
@@ -56,17 +57,18 @@
     "spacedmonkey/disable-xml-rpc-fully"        : "@stable", 
     "spacedmonkey/simple-google-news-sitemap"   : "@stable",
     "spacedmonkey/super-simple-events"          : "@stable",
-    "yoast/wordpress-seo"                       : "@stable",
+    
     "wp-cli/wp-cli"                             : "@stable",
     "wpackagist-plugin/advanced-custom-fields"  : "@stable",
     "wpackagist-plugin/ajax-comment-loading"    : "@stable",
     "wpackagist-plugin/batcache"                : "@stable",
     "wpackagist-plugin/contact-form-7"          : "@stable",
-    "wpackagist-plugin/hyperdb"                 : "@stable",
+    "wpackagist-plugin/hyperdb"                 : "dev-master",
     "wpackagist-plugin/google-analytics-for-wordpress"       : "@stable",
     "wpackagist-plugin/jetpack"                 : "@stable",
     "wpackagist-plugin/really-simple-captcha"   : "@stable",
-    "wpackagist-plugin/wordpress-bootstrap-css" : "dev-master"
+    "wpackagist-plugin/wordpress-bootstrap-css" : "dev-master",
+    "wpackagist-plugin/wordpress-seo"           : "@stable",
   },
   "require-dev" : {
         "wpackagist-plugin/query-monitor"             : "2.x",
