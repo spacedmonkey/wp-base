@@ -38,11 +38,11 @@ $batcache['noskip_cookies'] = array(
 
 // These variables are for the default configuration. Domain-specific configs follow.
 
-$batcache['max_age'] =  300; // Expire batcache items aged this many seconds (zero to disable supercache)
+$batcache['max_age'] =  900; // Expire batcache items aged this many seconds (zero to disable supercache)
 $batcache['remote']  =    0; // whether to replicate the cache across datacenters (req/sec not replicated)
 
-$batcache['times']   =    4; // Only batcache a page after it is accessed this many times... (two or more)
-$batcache['seconds'] =   60; // ...in this many whole seconds (zero to ignore this and use batcache immediately)
+$batcache['times']   =    2; // Only batcache a page after it is accessed this many times... (two or more)
+$batcache['seconds'] =  300; // ...in this many whole seconds (zero to ignore this and use batcache immediately)
 
 $batcache['group'] = 'supercache'; // Name of memcached group
 

@@ -26,7 +26,7 @@
     },
     {
        "type": "vcs",
-       "url":  "https://bitbucket.org/spacedmonkey/kandyweeding.git"
+       "url":  "https://bitbucket.org/spacedmonkey/kandywedding.git"
     },
     {
        "type": "vcs",
@@ -49,7 +49,7 @@
     "automattic/advanced-post-cache"            : "dev-spacedmonkey-composer-2",
     "spacedmonkey/http-concat"                  : "dev-master",
     "spacedmonkey/spacedmonkey"                 : "dev-master",
-    "spacedmonkey/kandyweeding"                 : "dev-master",
+    "spacedmonkey/kandywedding"                 : "dev-master",
     "spacedmonkey/jdh"                          : "dev-master",
     "humanmade/mercator"                        : "dev-master",
     "humanmade/memcache-object-cache"           : "dev-master",
