@@ -74,7 +74,7 @@
   },
   "extra": {
     "installer-paths": {
-      "web/wp-content/dropins/{$name}/": ["wpackagist-plugin/hyperdb", "wpackagist-plugin/batcache","humanmade/mercator","humanmade/memcache-object-cache"],
+      "web/wp-content/dropins/{$name}/": ["wpackagist-plugin/hyperdb","humanmade/memcache-object-cache"],
       "web/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
       "web/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/wp-content/themes/{$name}/": ["type:wordpress-theme"]

@@ -61,6 +61,9 @@ define('NONCE_SALT',       'put your unique phrase here');
  */
 $table_prefix  = 'wp_';
 
+
+require_once(dirname(__DIR__) . '/vendor/autoload.php');
+
 /**
  * For developers: WordPress debugging mode.
  *
