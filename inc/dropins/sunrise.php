@@ -1,5 +1,7 @@
 <?php
 
+add_filter( 'mercator.sso.enabled', '__return_false' );
+
 // Default mu-plugins directory if you haven't set it
 defined( 'WPMU_PLUGIN_DIR' ) or define( 'WPMU_PLUGIN_DIR', WP_CONTENT_DIR . '/mu-plugins' );
 
