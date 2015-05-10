@@ -61,8 +61,21 @@ define('NONCE_SALT',       'put your unique phrase here');
  */
 $table_prefix  = 'wp_';
 
-
-require_once(dirname(__DIR__) . '/vendor/autoload.php');
+/**
+ * Disable updates
+ */
+define('AUTOMATIC_UPDATER_DISABLED', true);
+define('WP_AUTO_UPDATE_CORE', false );
+/**
+ * Crons
+ */
+define('DISABLE_WP_CRON', true);
+define('ALTERNATE_WP_CRON', true );
+/**
+ * Disable file editor
+ */ 
+define('DISALLOW_FILE_EDIT', true);
+define('DISALLOW_FILE_MODS', true );
 
 /**
  * For developers: WordPress debugging mode.
@@ -72,6 +85,18 @@ require_once(dirname(__DIR__) . '/vendor/autoload.php');
  * in their development environments.
  */
 define('WP_DEBUG', false);
+
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+/** Location of the DB config file for HyperDB **/
+define( 'DB_CONFIG_FILE', __DIR__ . '/db-config.php' );
+
+require_once __DIR__ . '/batcache-config.php';
+
+
+/** Good morning! */
+define( 'SUNRISE', true );
 
 /* That's all, stop editing! Happy blogging. */
 

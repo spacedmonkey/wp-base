@@ -1,5 +1,5 @@
-composer update --prefer-source --no-dev --verbose
-composer update --prefer-source --no-dev --verbose
+composer update --prefer-dist --no-dev --verbose
+composer update --prefer-dist --no-dev --verbose
 mv web/wp-content/dropins/memcache-object-cache/object-cache.php web/wp-content/object-cache.php
 mv web/wp-content/dropins/hyperdb/db.php web/wp-content/db.php
 mv web/wp-content/dropins/batcache/advanced-cache.php web/wp-content/advanced-cache.php
