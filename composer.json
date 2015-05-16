@@ -15,10 +15,6 @@
     },
     {
        "type": "vcs",
-       "url":  "https://bitbucket.org/spacedmonkey/roots.git"
-    },
-    {
-       "type": "vcs",
        "url":  "https://bitbucket.org/spacedmonkey/jdh.git"
     },
     {
@@ -36,10 +32,6 @@
     {
        "type": "vcs",
        "url":  "https://github.com/spacedmonkey/memcache-object-cache.git"
-    },
-    {
-       "type": "vcs",
-       "url":  "https://github.com/spacedmonkey/http-concat.git"
     }
     
   ],
@@ -47,17 +39,16 @@
     "php": ">=5.4",
     "johnpbloch/wordpress"                      : "@stable",
     "composer/installers"                       : "1.x",
-    "automattic/advanced-post-cache"            : "dev-spacedmonkey-composer-2",
-    "spacedmonkey/http-concat"                  : "dev-master",
+    "automattic/advanced-post-cache"            : "dev-master",
     "spacedmonkey/spacedmonkey"                 : "dev-master",
     "spacedmonkey/kandywedding"                 : "dev-master",
     "spacedmonkey/jdh"                          : "dev-master",
     "humanmade/mercator"                        : "dev-master",
     "humanmade/memcache-object-cache"           : "dev-master",
     "spacedmonkey/disable-xml-rpc-fully"        : "@stable", 
+    "spacedmonkey/custom-post-type-rss-feed"    : "@stable", 
     "spacedmonkey/simple-google-news-sitemap"   : "@stable",
     "spacedmonkey/super-simple-events"          : "@stable",
-    
     "wp-cli/wp-cli"                             : "@stable",
     "wpackagist-plugin/advanced-custom-fields"  : "@stable",
     "wpackagist-plugin/ajax-comment-loading"    : "@stable",
@@ -76,7 +67,7 @@
   },
   "extra": {
     "installer-paths": {
-      "web/wp-content/dropins/{$name}/": ["wpackagist-plugin/batcache","wpackagist-plugin/hyperdb","humanmade/memcache-object-cache"],
+      "web/wp-content/dropins/{$name}/": ["wpackagist-plugin/batcache","wpackagist-plugin/hyperdb","humanmade/memcache-object-cache","automattic/advanced-post-cache"],
       "web/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
       "web/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/wp-content/themes/{$name}/": ["type:wordpress-theme"]
