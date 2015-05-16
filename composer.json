@@ -59,7 +59,8 @@
     "wpackagist-plugin/jetpack"                 : "@stable",
     "wpackagist-plugin/really-simple-captcha"   : "@stable",
     "wpackagist-plugin/wordpress-bootstrap-css" : "dev-master",
-    "wpackagist-plugin/wordpress-seo"           : "@stable"
+    "wpackagist-plugin/wordpress-seo"           : "@stable",
+    "wpackagist-plugin/wp-mail-smtp"            : "@stable"
   },
   "require-dev" : {
         "wpackagist-plugin/query-monitor"             : "2.x",
