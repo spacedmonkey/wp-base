@@ -51,6 +51,7 @@
     "spacedmonkey/super-simple-events"          : "@stable",
     "wp-cli/wp-cli"                             : "@stable",
     "wpackagist-plugin/advanced-custom-fields"  : "@stable",
+    "wpackagist-plugin/akismet"                 : "@stable",
     "wpackagist-plugin/ajax-comment-loading"    : "@stable",
     "wpackagist-plugin/batcache"                : "@stable",
     "wpackagist-plugin/contact-form-7"          : "@stable",
