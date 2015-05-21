@@ -54,6 +54,7 @@
     "wpackagist-plugin/akismet"                 : "@stable",
     "wpackagist-plugin/ajax-comment-loading"    : "@stable",
     "wpackagist-plugin/batcache"                : "@stable",
+    "wpackagist-plugin/backupwordpress"         : "@stable",
     "wpackagist-plugin/contact-form-7"          : "@stable",
     "wpackagist-plugin/hyperdb"                 : "dev-master",
     "wpackagist-plugin/google-analytics-for-wordpress"       : "@stable",
