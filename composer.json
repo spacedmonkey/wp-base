@@ -27,11 +27,11 @@
     },
     {
        "type": "vcs",
-       "url":  "https://github.com/spacedmonkey/advanced-post-cache.git"
+       "url":  "https://github.com/Automattic/advanced-post-cache.git"
     },
     {
        "type": "vcs",
-       "url":  "https://github.com/spacedmonkey/memcache-object-cache.git"
+       "url":  "https://github.com/humanmade/memcache-object-cache.git"
     }
     
   ],
@@ -46,6 +46,9 @@
     "humanmade/mercator"                        : "dev-master",
     "humanmade/memcache-object-cache"           : "dev-master",
     "spacedmonkey/disable-xml-rpc-fully"        : "@stable", 
+    "spacedmonkey/advanced-nav-cache"			: "*",
+    "spacedmonkey/built-in-taxos-cpt"			: "@stable",
+    "spacedmonkey/echo-js-lazy-load"        	: "*", 
     "spacedmonkey/custom-post-type-rss-feed"    : "@stable", 
     "spacedmonkey/simple-google-news-sitemap"   : "@stable",
     "spacedmonkey/super-simple-events"          : "@stable",
