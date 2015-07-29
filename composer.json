@@ -32,8 +32,15 @@
     {
        "type": "vcs",
        "url":  "https://github.com/humanmade/memcache-object-cache.git"
+    },
+    {
+       "type": "vcs",
+       "url":  "git@github.com:spacedmonkey/advanced-nav-cache.git"
+    },
+    {
+       "type": "vcs",
+       "url":  "git@github.com:spacedmonkey/echo-js-lazy-load.git"
     }
-    
   ],
   "require": {
     "php": ">=5.4",
