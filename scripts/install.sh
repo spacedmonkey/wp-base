@@ -6,3 +6,4 @@ mv web/wp-content/dropins/batcache/advanced-cache.php web/wp-content/advanced-ca
 mv web/wp-content/dropins/batcache/batcache.php web/wp-content/mu-plugins/batcache.php
 cp inc/dropins/*.php web/wp-content/
 cp inc/mu-plugins/*.php web/wp-content/mu-plugins/
+ln -s /var/www/content /var/www/web/wp-content/uploads
