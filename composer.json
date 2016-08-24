@@ -91,7 +91,8 @@
       "wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
       "wp-content/themes/{$name}/": ["type:wordpress-theme"]
    },
-   "wordpress-install-dir": "web",
+   "wordpress-install-dir": "web"
+  },
    "scripts": {
       "post-install-cmd": [
         "bash ./scripts/symlinks.sh"
@@ -100,5 +101,5 @@
         "bash ./scripts/symlinks.sh"
       ]
    }
-  }
+  
 }
