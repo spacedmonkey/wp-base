@@ -70,7 +70,7 @@
     "wpackagist-plugin/ajax-comment-loading"    : "@stable",
     "wpackagist-plugin/backupwordpress"         : "@stable",
     "wpackagist-plugin/contact-form-7"          : "@stable",
-    "wpackagist-plugin/hyperdb"                 : "dev-master",
+    "stuttter/ludicrousdb"                      : "dev-master",
     "wpackagist-plugin/google-analytics-for-wordpress"       : "@stable",
     "wpackagist-plugin/memcached-redux"       : "@stable",
     "wpackagist-plugin/jetpack"                 : "@stable",
@@ -86,7 +86,7 @@
   },
   "extra": {
     "installer-paths": {
-      "wp-content/dropins/{$name}/": ["automattic/batcache","wpackagist-plugin/hyperdb","wpackagist-plugin/memcached-redux"],
+      "wp-content/dropins/{$name}/": ["automattic/batcache","stuttter/ludicrousdb","wpackagist-plugin/memcached-redux"],
       "wp-content/plugins/{$name}/": ["type:wordpress-plugin", "timeincoss/enhanced-post-cache" ],
       "wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
       "wp-content/themes/{$name}/": ["type:wordpress-theme"]
