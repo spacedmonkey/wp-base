@@ -77,7 +77,7 @@
     "wpackagist-plugin/really-simple-captcha"   : "@stable",
     "wpackagist-plugin/wordpress-bootstrap-css" : "dev-master",
     "wpackagist-plugin/wordpress-seo"           : "@stable",
-    "wpackagist-plugin/wp-mail-smtp"            : "@stable", 
+    "wpackagist-plugin/wpmu-new-blog-defaults"                      : "2.2.x",
     "wpackagist-theme/baskerville"              : "@stable",
     "wpackagist-theme/twentythirteen"           : "@stable"
   },
