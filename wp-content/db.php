@@ -1,3 +1,3 @@
 <?php
 
-require_once("dropins/ludicrousdb/db.php");
+require_once( WP_CONTENT_DIR . "/dropins/ludicrousdb/db.php" );
