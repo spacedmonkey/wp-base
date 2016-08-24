@@ -6,12 +6,13 @@
      "preferred-install": "dist",
      "prefer-stable": true,
      "vendor-dir":  "vendor",
-     "bin-dir":     "bin"
+     "bin-dir":     "bin",
+     "bitbucket-oauth": {"bitbucket.org": {"consumer-key": "B9cWTT7BSg5gC7ZLCA", "consumer-secret": "aSHdAJzmXwnvnbM2xqKwGzGvMJpC2G84"}}
   },
   "repositories": [
     {
       "type": "composer",
-      "url": "http://wpackagist.org"
+      "url": "https://wpackagist.org"
     },
     {
        "type": "vcs",
@@ -85,10 +86,10 @@
   },
   "extra": {
     "installer-paths": {
-      "web/wp-content/dropins/{$name}/": ["automattic/batcache","wpackagist-plugin/hyperdb","wpackagist-plugin/memcached-redux","automattic/advanced-post-cache"],
-      "web/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "web/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-      "web/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+      "wp-content/dropins/{$name}/": ["automattic/batcache","wpackagist-plugin/hyperdb","wpackagist-plugin/memcached-redux","automattic/advanced-post-cache"],
+      "wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "wp-content/themes/{$name}/": ["type:wordpress-theme"]
     },
     "wordpress-install-dir": "web"
   }
