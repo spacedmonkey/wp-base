@@ -78,7 +78,8 @@
     "wpackagist-plugin/wordpress-bootstrap-css" : "dev-master",
     "wpackagist-plugin/wordpress-seo"           : "@stable",
     "wpackagist-plugin/wp-mail-smtp"            : "@stable", 
-    "wpackagist-theme/baskerville"              : "@stable"
+    "wpackagist-theme/baskerville"              : "@stable",
+    "wpackagist-theme/twentythirteen"           : "@stable",
   },
   "require-dev" : {
         "wpackagist-plugin/query-monitor"             : "2.x",
