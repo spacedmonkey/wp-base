@@ -51,7 +51,7 @@
     "php": ">=5.4",
     "johnpbloch/wordpress"                      : "@stable",
     "composer/installers"                       : "1.x",
-    "automattic/advanced-post-cache"            : "dev-master",
+    "timeincoss/enhanced-post-cache"            : "dev-master",
     "automattic/batcache"                       : "dev-master",
     "spacedmonkey/spacedmonkey"                 : "dev-master",
     "spacedmonkey/kandywedding"                 : "dev-master",
@@ -86,11 +86,19 @@
   },
   "extra": {
     "installer-paths": {
-      "wp-content/dropins/{$name}/": ["automattic/batcache","wpackagist-plugin/hyperdb","wpackagist-plugin/memcached-redux","automattic/advanced-post-cache"],
+      "wp-content/dropins/{$name}/": ["automattic/batcache","wpackagist-plugin/hyperdb","wpackagist-plugin/memcached-redux"],
+      "wp-content/plugins/{$name}/": ["type:wordpress-plugin", "timeincoss/enhanced-post-cache" ],
       "wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
       "wp-content/themes/{$name}/": ["type:wordpress-theme"]
-    },
-    "wordpress-install-dir": "web"
+   },
+   "wordpress-install-dir": "web",
+   "scripts": {
+      "post-install-cmd": [
+        "bash ./scripts/symlinks.sh"
+      ],
+      "post-update-cmd": [
+        "bash ./scripts/symlinks.sh"
+      ]
+   }
   }
 }
