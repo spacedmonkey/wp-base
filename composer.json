@@ -36,10 +36,6 @@
     },
     {
        "type": "vcs",
-       "url":  "https://github.com/humanmade/memcache-object-cache.git"
-    },
-    {
-       "type": "vcs",
        "url":  "git@github.com:spacedmonkey/advanced-nav-cache.git"
     },
     {
@@ -57,6 +53,7 @@
     "spacedmonkey/kandywedding"                 : "dev-master",
     "spacedmonkey/jdh"                          : "dev-master",
     "humanmade/mercator"                        : "dev-master",
+    
     "spacedmonkey/disable-xml-rpc-fully"        : "@stable", 
     "spacedmonkey/advanced-nav-cache"			: "dev-master",
     "spacedmonkey/built-in-taxos-cpt"			: "@stable",
@@ -72,8 +69,8 @@
     "wpackagist-plugin/contact-form-7"          : "@stable",
     "stuttter/ludicrousdb"                      : "dev-master",
     "wpackagist-plugin/google-analytics-for-wordpress"       : "@stable",
-    "wpackagist-plugin/memcached-redux"       : "@stable",
     "wpackagist-plugin/jetpack"                 : "@stable",
+    "wpackagist-plugin/memcached-redux"       : "@stable",
     "wpackagist-plugin/really-simple-captcha"   : "@stable",
     "wpackagist-plugin/wordpress-bootstrap-css" : "dev-master",
     "wpackagist-plugin/wordpress-seo"           : "@stable",
