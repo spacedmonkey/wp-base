@@ -72,7 +72,7 @@
       "wp-content/dropins/{$name}/": ["automattic/batcache","wpackagist-plugin/memcached-redux"],
       "wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin", "spacedmonkey/built-in-taxos-cpt", "timeincoss/enhanced-post-cache" ],
       "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-      "wp-content/my-themes/{$name}/": ["type:wordpress-theme"]
+      "wp-content/themes/{$name}/": ["type:wordpress-theme"]
     },
    "wordpress-install-dir": "html"
   },
