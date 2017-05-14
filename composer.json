@@ -3,11 +3,12 @@
   "type": "project",
   "license": "MIT",
   "config": {
-     "preferred-install": "dist",
-     "prefer-stable": true,
-     "vendor-dir":  "vendor",
-     "bin-dir":     "bin"
-  },
+       "preferred-install": "dist",
+       "prefer-stable": true,
+       "vendor-dir":  "vendor",
+       "bin-dir":     "bin",
+       "bitbucket-oauth": {"bitbucket.org": {"consumer-key": "B9cWTT7BSg5gC7ZLCA", "consumer-secret": "aSHdAJzmXwnvnbM2xqKwGzGvMJpC2G84"}}
+    },
   "repositories": [
     {
       "type": "composer",
