@@ -1,8 +1,14 @@
 local-config.php
 wp-cli.local.yml
 vendor
-web
+html
 bin
+
+wp-content/uploads
+wp-content/plugins
+wp-content/mu-plugins
+wp-content/dropins
+wp-content/my-themes
 
 .DS_Store
 .idea

@@ -61,13 +61,13 @@ if ( '/wp-signup.php' == $_SERVER['PHP_SELF'] && isset( $_COOKIE['ref'] ) && '36
 }
 
 // Don't cache PHP files except the root index.php
-if ( substr($_SERVER['REQUEST_URI'], -4) == '.php' && ( '/index.php' != $_SERVER['REQUEST_URI'] ) ) {
+if ( isset($_SERVER['REQUEST_URI']) && substr($_SERVER['REQUEST_URI'], -4) == '.php' && ( '/index.php' != $_SERVER['REQUEST_URI'] ) ) {
 	$batcache['max_age'] = 0; // disable batcache
 }
-if ( substr($_SERVER['REQUEST_URI'], -3) == '.js' ) {
+if ( isset($_SERVER['REQUEST_URI']) && substr($_SERVER['REQUEST_URI'], -3) == '.js' ) {
 	$batcache['max_age'] = 0; // disable batcache
 }
-if ( substr($_SERVER['REQUEST_URI'], -10) == 'robots.txt' ) {
+if ( isset($_SERVER['REQUEST_URI']) && substr($_SERVER['REQUEST_URI'], -10) == 'robots.txt' ) {
 	$batcache['max_age'] = 0; // disable batcache
 }
 /*  Disable batcache for /feed/ requests where there is no query string set
@@ -75,10 +75,10 @@ if ( substr($_SERVER['REQUEST_URI'], -10) == 'robots.txt' ) {
  *  with no batcache invalidations results in stale data being served and
  *  subsequently cached
  *  */
-if ( $_SERVER['REQUEST_URI'] == '/feed/' &&  $_SERVER['QUERY_STRING'] == '' )
+if ( isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] == '/feed/' &&  $_SERVER['QUERY_STRING'] == '' )
 	$batcache['max_age'] = 0; // disable batcache
 
-if ( $_SERVER['REQUEST_URI'] == '/sitemap.xml' &&  $_SERVER['QUERY_STRING'] == '' )
+if ( isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] == '/sitemap.xml' &&  $_SERVER['QUERY_STRING'] == '' )
 	$batcache['max_age'] = 0; // disable batcache
 
 

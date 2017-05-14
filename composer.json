@@ -27,56 +27,40 @@
     },
     {
        "type": "vcs",
-       "url":  "https://github.com/Automattic/advanced-post-cache.git"
-    },
-    {
-       "type": "vcs",
        "url":  "https://github.com/Automattic/batcache.git"
-    },
-    {
-       "type": "vcs",
-       "url":  "https://github.com/humanmade/memcache-object-cache.git"
-    },
-    {
-       "type": "vcs",
-       "url":  "git@github.com:spacedmonkey/advanced-nav-cache.git"
-    },
-    {
-       "type": "vcs",
-       "url":  "git@github.com:spacedmonkey/echo-js-lazy-load.git"
     }
   ],
   "require": {
     "php": ">=5.4",
     "johnpbloch/wordpress"                      : "@stable",
     "composer/installers"                       : "1.x",
-    "automattic/advanced-post-cache"            : "dev-master",
     "automattic/batcache"                       : "dev-master",
     "spacedmonkey/spacedmonkey"                 : "dev-master",
     "spacedmonkey/kandywedding"                 : "dev-master",
     "spacedmonkey/jdh"                          : "dev-master",
     "humanmade/mercator"                        : "dev-master",
-    "spacedmonkey/disable-xml-rpc-fully"        : "@stable", 
-    "spacedmonkey/advanced-nav-cache"			: "dev-master",
-    "spacedmonkey/built-in-taxos-cpt"			: "@stable",
-    "spacedmonkey/echo-js-lazy-load"        	: "dev-master", 
-    "spacedmonkey/custom-post-type-rss-feed"    : "@stable", 
+    "spacedmonkey/disable-xml-rpc-fully"        : "@stable",
+    "spacedmonkey/advanced-nav-cache"			      : "dev-master",
+    "spacedmonkey/batcache-manager"			        : "dev-master",
+    "spacedmonkey/built-in-taxos-cpt"			      : "@stable",
+    "spacedmonkey/echo-js-lazy-load"        	  : "dev-master",
+    "spacedmonkey/custom-post-type-rss-feed"    : "@stable",
     "spacedmonkey/simple-google-news-sitemap"   : "@stable",
     "spacedmonkey/super-simple-events"          : "@stable",
+    "stuttter/ludicrousdb"                      : "dev-master",
+    "timeincoss/enhanced-post-cache"            : "@stable",
     "wp-cli/wp-cli"                             : "@stable",
     "wpackagist-plugin/advanced-custom-fields"  : "@stable",
     "wpackagist-plugin/akismet"                 : "@stable",
     "wpackagist-plugin/ajax-comment-loading"    : "@stable",
-    "wpackagist-plugin/backupwordpress"         : "@stable",
     "wpackagist-plugin/contact-form-7"          : "@stable",
-    "wpackagist-plugin/hyperdb"                 : "dev-master",
     "wpackagist-plugin/google-analytics-for-wordpress"       : "@stable",
     "wpackagist-plugin/memcached-redux"       : "@stable",
     "wpackagist-plugin/jetpack"                 : "@stable",
     "wpackagist-plugin/really-simple-captcha"   : "@stable",
     "wpackagist-plugin/wordpress-bootstrap-css" : "dev-master",
     "wpackagist-plugin/wordpress-seo"           : "@stable",
-    "wpackagist-plugin/wp-mail-smtp"            : "@stable", 
+    "wpackagist-plugin/wp-mail-smtp"            : "@stable",
     "wpackagist-theme/baskerville"              : "@stable"
   },
   "require-dev" : {
@@ -85,11 +69,20 @@
   },
   "extra": {
     "installer-paths": {
-      "web/wp-content/dropins/{$name}/": ["automattic/batcache","wpackagist-plugin/hyperdb","wpackagist-plugin/memcached-redux","automattic/advanced-post-cache"],
-      "web/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "web/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-      "web/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+      "wp-content/dropins/{$name}/": ["automattic/batcache","wpackagist-plugin/memcached-redux"],
+      "wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin", "spacedmonkey/built-in-taxos-cpt", "timeincoss/enhanced-post-cache" ],
+      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "wp-content/my-themes/{$name}/": ["type:wordpress-theme"]
     },
-    "wordpress-install-dir": "web"
-  }
+   "wordpress-install-dir": "html"
+  },
+   "scripts": {
+      "post-install-cmd": [
+        "bash ./scripts/symlinks.sh"
+      ],
+      "post-update-cmd": [
+        "bash ./scripts/symlinks.sh"
+      ]
+   }
+
 }

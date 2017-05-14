@@ -36,8 +36,6 @@ require_once __DIR__ . '/batcache-config.php';
 /** Location of the DB config file for HyperDB **/
 define( 'DB_CONFIG_FILE', __DIR__ . '/db-config.php' );
 
-
-
 /**
  * Disable updates
  */
@@ -62,33 +60,6 @@ define('DISALLOW_FILE_MODS', true );
  * in their development environments.
  */
 define('WP_DEBUG', false);
-
-
-
-$http_host = $_SERVER['HTTP_HOST'];
-
-define('COOKIE_DOMAIN', $http_host);
-
-if ( isset($_SERVER['HTTPS']) ) {
-        if ( 'on' == strtolower($_SERVER['HTTPS']) || '1' == $_SERVER['HTTPS'] ) {
-                $http_host = "https://{$http_host}";
-        } else {
-                $http_host = "http://{$http_host}";
-        }
-} else if ( isset($_SERVER['SERVER_PORT']) && ( '443' == $_SERVER['SERVER_PORT'] ) ) {
-        $http_host = "https://{$http_host}";
-} else {
-        $http_host = "http://{$http_host}";
-}
-define('WP_PLUGIN_DIR',   ABSPATH . 'wp-content/plugins' );
-define('WP_PLUGIN_URL',   "{$http_host}/wp-content/plugins" );
-define('WPMU_PLUGIN_DIR', ABSPATH . 'wp-content/mu-plugins' );
-define('WPMU_PLUGIN_URL', "{$http_host}/wp-content/mu-plugins" );
-define('WP_CONTENT_DIR',  ABSPATH . 'wp-content' );
-define('WP_CONTENT_URL',  "{$http_host}/wp-content" );
-define('WP_HOME', $http_host);
-define('WP_SITEURL', $http_host);
-
 
 /* That's all, stop editing! Happy blogging. */
 
