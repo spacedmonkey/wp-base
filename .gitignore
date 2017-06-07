@@ -3,6 +3,7 @@ wp-cli.local.yml
 vendor
 web
 bin
+wp-content
 
 .DS_Store
 .idea

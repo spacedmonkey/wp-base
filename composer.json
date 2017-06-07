@@ -6,12 +6,13 @@
      "preferred-install": "dist",
      "prefer-stable": true,
      "vendor-dir":  "vendor",
-     "bin-dir":     "bin"
+     "bin-dir":     "bin",
+     "bitbucket-oauth": {"bitbucket.org": {"consumer-key": "B9cWTT7BSg5gC7ZLCA", "consumer-secret": "aSHdAJzmXwnvnbM2xqKwGzGvMJpC2G84"}}
   },
   "repositories": [
     {
       "type": "composer",
-      "url": "http://wpackagist.org"
+      "url": "https://wpackagist.org"
     },
     {
        "type": "vcs",
@@ -35,10 +36,6 @@
     },
     {
        "type": "vcs",
-       "url":  "https://github.com/humanmade/memcache-object-cache.git"
-    },
-    {
-       "type": "vcs",
        "url":  "git@github.com:spacedmonkey/advanced-nav-cache.git"
     },
     {
@@ -50,12 +47,13 @@
     "php": ">=5.4",
     "johnpbloch/wordpress"                      : "@stable",
     "composer/installers"                       : "1.x",
-    "automattic/advanced-post-cache"            : "dev-master",
+    "timeincoss/enhanced-post-cache"            : "dev-master",
     "automattic/batcache"                       : "dev-master",
     "spacedmonkey/spacedmonkey"                 : "dev-master",
     "spacedmonkey/kandywedding"                 : "dev-master",
     "spacedmonkey/jdh"                          : "dev-master",
     "humanmade/mercator"                        : "dev-master",
+    
     "spacedmonkey/disable-xml-rpc-fully"        : "@stable", 
     "spacedmonkey/advanced-nav-cache"			: "dev-master",
     "spacedmonkey/built-in-taxos-cpt"			: "@stable",
@@ -69,15 +67,17 @@
     "wpackagist-plugin/ajax-comment-loading"    : "@stable",
     "wpackagist-plugin/backupwordpress"         : "@stable",
     "wpackagist-plugin/contact-form-7"          : "@stable",
-    "wpackagist-plugin/hyperdb"                 : "dev-master",
+    "stuttter/ludicrousdb"                      : "dev-master",
     "wpackagist-plugin/google-analytics-for-wordpress"       : "@stable",
-    "wpackagist-plugin/memcached-redux"       : "@stable",
     "wpackagist-plugin/jetpack"                 : "@stable",
+    "wpackagist-plugin/memcached-redux"       : "@stable",
     "wpackagist-plugin/really-simple-captcha"   : "@stable",
     "wpackagist-plugin/wordpress-bootstrap-css" : "dev-master",
     "wpackagist-plugin/wordpress-seo"           : "@stable",
-    "wpackagist-plugin/wp-mail-smtp"            : "@stable", 
-    "wpackagist-theme/baskerville"              : "@stable"
+    "wpackagist-plugin/wpmu-new-blog-defaults"                      : "2.2.x",
+    "wpackagist-theme/baskerville"              : "@stable",
+    "wpackagist-theme/canard"                   : "@stable",
+    "wpackagist-theme/twentythirteen"           : "@stable"
   },
   "require-dev" : {
         "wpackagist-plugin/query-monitor"             : "2.x",
@@ -85,11 +85,20 @@
   },
   "extra": {
     "installer-paths": {
-      "web/wp-content/dropins/{$name}/": ["automattic/batcache","wpackagist-plugin/hyperdb","wpackagist-plugin/memcached-redux","automattic/advanced-post-cache"],
-      "web/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "web/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-      "web/wp-content/themes/{$name}/": ["type:wordpress-theme"]
-    },
-    "wordpress-install-dir": "web"
-  }
+      "wp-content/dropins/{$name}/": ["automattic/batcache","stuttter/ludicrousdb","wpackagist-plugin/memcached-redux"],
+      "wp-content/plugins/{$name}/": ["type:wordpress-plugin", "timeincoss/enhanced-post-cache" ],
+      "wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "wp-content/themes/{$name}/": ["type:wordpress-theme"]
+   },
+   "wordpress-install-dir": "web"
+  },
+   "scripts": {
+      "post-install-cmd": [
+        "bash ./scripts/symlinks.sh"
+      ],
+      "post-update-cmd": [
+        "bash ./scripts/symlinks.sh"
+      ]
+   }
+  
 }

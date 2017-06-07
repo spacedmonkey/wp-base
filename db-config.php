@@ -50,6 +50,7 @@ $wpdb->add_database(array(
 	'user'     => DB_USER,
 	'password' => DB_PASSWORD,
 	'name'     => DB_NAME,
+	'write'    => 1,
 ));
 
 /**
